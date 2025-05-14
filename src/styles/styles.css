@@ -367,23 +367,28 @@ nav {
 }
 
 .service__list li:nth-child(1) span {
+  color: #34d399; /* verde */
+  background-color: #d1fae5;
+}
+
+.service__list li:nth-child(2) span {
+  color: #38bdf8; /* celeste */
+  background-color: #e0f2fe;
+}
+
+.service__list li:nth-child(3) span {
   color: #60a5fa;
   background-color: #dbeafe;
 }
 
-.service__list li:nth-child(2) span {
-  color: #f472b6;
-  background-color: #fce7f3;
-}
-
-.service__list li:nth-child(3) span {
-  color: #c084fc;
-  background-color: #f3e8ff;
-}
-
 .service__list li:nth-child(4) span {
-  color: #fb7185;
-  background-color: #ffe4e6;
+  color: #818cf8;
+  background-color: #e0e7ff;
+}
+
+.service__list li:nth-child(5) span {
+  color: #14b8a6;
+  background-color: #ccfbf1;
 }
 
 .banner__content {
@@ -602,4 +607,51 @@ nav {
   .room__grid {
     gap: 2rem;
   }
+}
+
+.benefits__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.benefits__header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.benefits__desc {
+  color: #666;
+  font-size: 1rem;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.benefit__card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.benefit__card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit__card i {
+  font-size: 2rem;
+  color: #21ce80;
+  margin-bottom: 0.5rem;
+}
+
+.benefit__card p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
 }
