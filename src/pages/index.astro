@@ -1,5 +1,5 @@
 ---
-
+import prueba from '../assets/prueba.jpg' // o cambia según la imagen real
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/styles.css';
 ---
@@ -7,6 +7,9 @@ import '../styles/styles.css';
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- ya puede haber cosas aquí -->
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rayal Park Hotel</title>
@@ -183,35 +186,54 @@ import '../styles/styles.css';
     </div>
   </div>
     </section>
+    
+    
 
-    <section class="section__container banner__container">
-       <div class="benefits__header">
-    <h2><span class="dot">🔵</span> 1. Beneficios Incluidos — “¡Ya Viene Contigo!”</h2>
-    <p class="benefits__desc">Todo esto lo tienes gratis desde que reservas con nosotros.</p>
+  <section class="services top">
+  <div class="container">
+    <div class="heading">
+      <h1>SERVICES</h1>
+      <h2>Servicios Premium — “Dale un Upgrade a tu Estancia”</h2>
+      <p>Pequeños lujos que hacen una gran diferencia</p>
+    </div>
+
+    <div class="content flex_space">
+      <!-- Cards -->
+      <div class="left grid2">
+        <div class="box">
+          <div class="text">
+            <i class="fa-solid fa-snowflake"></i>
+            <h3>Aire acondicionado</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <i class="fa-solid fa-utensils"></i>
+            <h3>Desayuno casero</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <i class="fa-solid fa-store"></i>
+            <h3>Kiosco de snacks</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <i class="fa-solid fa-film"></i>
+            <h3>Noche de cine</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="right">
+        <img src="/assets/prueba.jpg" alt="Servicios Premium" />
+      </div>
+    </div>
   </div>
-  <div class="benefits__grid">
-    <div class="benefit__card">
-      <i class="ri-parking-box-line"></i>
-      <p>Estacionamiento privado</p>
-    </div>
-    <div class="benefit__card">
-      <i class="ri-leaf-line"></i>
-      <p>Zona natural rodeada de árboles</p>
-    </div>
-    <div class="benefit__card">
-      <i class="ri-dribbble-line"></i>
-      <p>Cancha para deportes o juegos</p>
-    </div>
-    <div class="benefit__card">
-      <i class="ri-map-pin-line"></i>
-      <p>Consejos turísticos y mapas gratuitos</p>
-    </div>
-    <div class="benefit__card">
-      <i class="ri-wifi-line"></i>
-      <p>Wi-Fi rápido en todo el hotel</p>
-    </div>
-  </div>
-    </section>
+</section>
+
 
     <section class="explore" id="explore">
       <p class="section__subheader">EXPLORE</p>
