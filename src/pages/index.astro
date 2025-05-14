@@ -189,50 +189,41 @@ import '../styles/styles.css';
     
     
 
-  <section class="services top">
-  <div class="container">
-    <div class="heading">
-      <h1>SERVICES</h1>
-      <h2>Servicios Premium — “Dale un Upgrade a tu Estancia”</h2>
-      <p>Pequeños lujos que hacen una gran diferencia</p>
+<section class="services" id="servicios">
+  <div class="services__wrapper">
+    <!-- Columna izquierda -->
+    <div class="services__left">
+      <h1 class="services__title-bg">SERVICES</h1>
+      <h2 class="services__title">Servicios Premium — “Dale un Upgrade a tu Estancia”</h2>
+      <p class="services__subtitle">Pequeños lujos que hacen una gran diferencia</p>
+
+      <div class="services__grid">
+        <div class="service-card">
+          <i class="fa-solid fa-snowflake"></i>
+          <h3>Aire acondicionado</h3>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Desayuno casero</h3>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-store"></i>
+          <h3>Kiosco de snacks</h3>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-film"></i>
+          <h3>Noche de cine</h3>
+        </div>
+      </div>
     </div>
 
-    <div class="content flex_space">
-      <!-- Cards -->
-      <div class="left grid2">
-        <div class="box">
-          <div class="text">
-            <i class="fa-solid fa-snowflake"></i>
-            <h3>Aire acondicionado</h3>
-          </div>
-        </div>
-        <div class="box">
-          <div class="text">
-            <i class="fa-solid fa-utensils"></i>
-            <h3>Desayuno casero</h3>
-          </div>
-        </div>
-        <div class="box">
-          <div class="text">
-            <i class="fa-solid fa-store"></i>
-            <h3>Kiosco de snacks</h3>
-          </div>
-        </div>
-        <div class="box">
-          <div class="text">
-            <i class="fa-solid fa-film"></i>
-            <h3>Noche de cine</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Imagen -->
-      <div class="right">
-        <img src="/assets/prueba.jpg" alt="Servicios Premium" />
-      </div>
+    <!-- Columna derecha -->
+    <div class="services__right">
+      <img src="/assets/prueba.jpg" alt="Servicios Premium" />
     </div>
   </div>
 </section>
+
 
 
     <section class="explore" id="explore">
