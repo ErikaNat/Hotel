@@ -1,5 +1,5 @@
 ---
-import prueba from '../assets/prueba.jpg' // o cambia según la imagen real
+import prueba from '../assets/prueba.jpg'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/styles.css';
 ---
@@ -18,6 +18,12 @@ import '../styles/styles.css';
   </head>
   <body>
     <header class="header">
+      <div class="header-carousel">
+  <img src="assets/header.jpg" class="carousel-image active" alt="Imagen 1" />
+  <img src="assets/foto2.jpg" class="carousel-image" alt="Imagen 2" />
+  <img src="assets/foto3.jpg" class="carousel-image" alt="Imagen 3" />
+  <img src="assets/foto4.jpg" class="carousel-image" alt="Imagen 4" />
+</div>
       <nav>
         <div class="nav__bar">
           <div class="logo">
@@ -298,5 +304,7 @@ import '../styles/styles.css';
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="/src/scripts/main.js"></script>
   
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module" src="/src/scripts/carousel.js"></script>
   </body>
 </html>
