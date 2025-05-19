@@ -9,6 +9,7 @@ import '../styles/styles.css';
   <head>
     <!-- ya puede haber cosas aquí -->
   <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  
     <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -189,29 +190,36 @@ import '../styles/styles.css';
     
     
 
-<section class="services" id="servicios">
+
+    <section class="services" id="servicios">
   <div class="services__wrapper">
     <!-- Columna izquierda -->
     <div class="services__left">
-      <h1 class="services__title-bg">SERVICES</h1>
-      <h2 class="services__title">Servicios Premium — “Dale un Upgrade a tu Estancia”</h2>
-      <p class="services__subtitle">Pequeños lujos que hacen una gran diferencia</p>
+      <div class="services__heading">
+  <h1 class="services__title-bg sr-fade-up">SERVICES</h1>
+  <h2 class="services__title sr-fade-up">Our Services</h2>
+
+  <!-- Agrupar párrafos en un bloque separado -->
+  <div class="services__description-center">
+    <p class="services__subtitle">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+  </div>
+</div>
 
       <div class="services__grid">
-        <div class="service-card">
-          <i class="fa-solid fa-snowflake"></i>
+        <div class="service-card" data-extra="+2 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
           <h3>Aire acondicionado</h3>
         </div>
-        <div class="service-card">
-          <i class="fa-solid fa-utensils"></i>
+        <div class="service-card" data-extra="+3 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
           <h3>Desayuno casero</h3>
         </div>
-        <div class="service-card">
-          <i class="fa-solid fa-store"></i>
+        <div class="service-card" data-extra="+30 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
           <h3>Kiosco de snacks</h3>
         </div>
-        <div class="service-card">
-          <i class="fa-solid fa-film"></i>
+        <div class="service-card" data-extra="+25 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
           <h3>Noche de cine</h3>
         </div>
       </div>
@@ -219,9 +227,10 @@ import '../styles/styles.css';
 
     <!-- Columna derecha -->
     <div class="services__right">
-      <img src="/assets/prueba.jpg" alt="Servicios Premium" />
-    </div>
+  <div class="zoom-container">
+    <img src="/assets/hotel-fachada.jpg" alt="Hotel exterior" class="scroll-zoom" />
   </div>
+</div>
 </section>
 
 
@@ -291,5 +300,6 @@ import '../styles/styles.css';
     <!-- ✅ Scripts externos -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="/src/scripts/main.js"></script>
+  
   </body>
 </html>

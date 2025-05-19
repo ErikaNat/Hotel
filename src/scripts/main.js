@@ -68,3 +68,34 @@ ScrollReveal().reveal(".service__list li", {
   interval: 500,
   origin: "right",
 });
+
+// Our Services Section (titulo + subtitulo + tarjetas)
+ScrollReveal().reveal(".services__title-bg", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".services__title", {
+  ...scrollRevealOption,
+  delay: 300,
+});
+
+ScrollReveal().reveal(".services__subtitle", {
+  ...scrollRevealOption,
+  delay: 600,
+});
+
+ScrollReveal().reveal(".service-card", {
+  ...scrollRevealOption,
+  interval: 200,
+  delay: 900,
+});
+
+ScrollReveal().reveal(".zoom-container img", {
+  distance: "0px",
+  opacity: 0,
+  duration: 1,
+  beforeReveal: (el) => {
+    el.classList.add("revealed");
+  },
+});
