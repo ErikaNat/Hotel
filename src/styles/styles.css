@@ -618,6 +618,7 @@ nav {
 .services {
   padding: 6rem 1rem;
   background-color: #fff;
+  margin-bottom: 0rem; /* ✅ Nuevo: Separación hacia la siguiente sección */
 }
 
 
@@ -840,8 +841,6 @@ nav {
   opacity: 1;
 }
 
-
-
 .header-carousel {
   position: absolute;
   top: 0;
@@ -863,4 +862,54 @@ nav {
 
 .carousel-image.active {
   opacity: 1;
+}
+
+.reception-benefits {
+  padding: 2rem 1rem; /* ✅ Antes era 5rem, lo bajamos */
+  background-color: #ffffff;
+  margin-top: -28rem; /* ✅ Sube visualmente la sección */
+}
+
+
+.reception-benefits__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reception-benefits__image img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.reception-benefits__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Reutilizamos estilos existentes */
+.reception-benefits .service__list {
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.explore {
+  padding-top: 6rem;
+  margin-top: 3rem; /* ✅ Nuevo: espacio adicional debajo del bloque anterior */
+}
+
+.map__container {
+  max-width: 100%;
+  padding: 0 1rem 3rem;
+  margin: 0 auto;
 }
