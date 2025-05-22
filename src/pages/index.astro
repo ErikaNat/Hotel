@@ -1,6 +1,4 @@
 ---
-import prueba from '../assets/prueba.jpg'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/styles.css';
 ---
 
@@ -8,26 +6,40 @@ import '../styles/styles.css';
 <html lang="es">
   <head>
     <!-- ya puede haber cosas aquí -->
-  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
-  
     <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rayal Park Hotel</title>
+    <title>Hotel Tariquia</title>
+
+    <meta name="description" content="Hotel Tariquia - Disfruta de una estancia única en Bermejo, Tarija. Ofrecemos comodidad y servicios excepcionales.">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Agrega esto en el <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- jQuery (cargar primero) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
   </head>
   <body>
     <header class="header">
       <div class="header-carousel">
-  <img src="assets/header.jpg" class="carousel-image active" alt="Imagen 1" />
-  <img src="assets/foto2.jpg" class="carousel-image" alt="Imagen 2" />
-  <img src="assets/foto3.jpg" class="carousel-image" alt="Imagen 3" />
-  <img src="assets/foto4.jpg" class="carousel-image" alt="Imagen 4" />
-</div>
+        <img src="assets/header.jpg" class="carousel-image active" alt="Imagen 1" />
+        <img src="assets/foto2.jpg" class="carousel-image" alt="Imagen 2" />
+        <img src="assets/foto3.jpg" class="carousel-image" alt="Imagen 3" />
+        <img src="assets/foto4.jpg" class="carousel-image" alt="Imagen 4" />
+      </div>
       <nav>
         <div class="nav__bar">
           <div class="logo">
-            <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+            <a href="#"><img src="/ImagenesHotel/Logo-Hotel.png" alt="Logo-Hotel" /></a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <i class="ri-menu-line"></i>
@@ -48,34 +60,7 @@ import '../styles/styles.css';
       </div>
     </header>
 
-    <section class="section__container booking__container">
-      <form action="/" class="booking__form">
-        <div class="input__group">
-          <span><i class="ri-calendar-2-fill"></i></span>
-          <div>
-            <label for="check-in">CHECK-IN</label>
-            <input type="text" placeholder="Check In" />
-          </div>
-        </div>
-        <div class="input__group">
-          <span><i class="ri-calendar-2-fill"></i></span>
-          <div>
-            <label for="check-out">CHECK-OUT</label>
-            <input type="text" placeholder="Check Out" />
-          </div>
-        </div>
-        <div class="input__group">
-          <span><i class="ri-user-fill"></i></span>
-          <div>
-            <label for="guest">GUEST</label>
-            <input type="text" placeholder="Guest" />
-          </div>
-        </div>
-        <div class="input__group input__btn">
-          <button class="btn">CHECH OUT</button>
-        </div>
-      </form>
-    </section>
+    
 
     <section class="section__container about__container" id="about">
       <div class="about__image">
@@ -88,211 +73,512 @@ import '../styles/styles.css';
           Con un enfoque en alojamientos de calidad, atención personalizada y reservas sin complicaciones, nuestro hotel está comprometido a brindarte una experiencia única. Cada detalle está pensado para que tu viaje sea cómodo, seguro y lleno de momentos inolvidables.
         </p>
         <div class="about__btn">
-          <button class="btn">Read More</button>
+          <button class="btn">Leer Más</button>
         </div>
       </div>
     </section>
 
-    <section class="section__container room__container">
-      <p class="section__subheader">OUR LIVING ROOM</p>
-      <h2 class="section__header">The Most Memorable Rest Time Starts Here.</h2>
-      <div class="room__grid">
-        <div class="room__card">
-          <div class="room__card__image">
-            <img src="assets/room-1.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
-            </div>
-          </div>
-          <div class="room__card__details">
-            <h4>Deluxe Ocean View</h4>
-            <p>
-              Bask in luxury with breathtaking ocean views from your private
-              suite.
-            </p>
-            <h5>Starting from <span>$299/night</span></h5>
-            <button class="btn">Book Now</button>
-          </div>
+    
+
+
+
+    <!-- Gallery Section - Versión corregida -->
+    <section class="gallery">
+      <div class="section__container">
+        <div class="heading">
+          <p class="section__subheader">Explora</p>
+          <h2 class="section__header">El Hotel</h2>
         </div>
-        <div class="room__card">
-          <div class="room__card__image">
-            <img src="assets/room-2.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
+
+        <div class="content mtop">
+          <div class="owl-carousel owl-theme">
+            <!-- Todas las imágenes con rutas consistentes -->
+            
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Arreglo-Habitacion-1.jpeg" alt="Arreglo-Habitacion-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Arreglo de Habitacion</h3>
+              </div>
             </div>
-          </div>
-          <div class="room__card__details">
-            <h4>Executive Cityscape Room</h4>
-            <p>
-              Experience urban elegance and modern comfort in the heart of the
-              city.
-            </p>
-            <h5>Starting from <span>$199/night</span></h5>
-            <button class="btn">Book Now</button>
-          </div>
-        </div>
-        <div class="room__card">
-          <div class="room__card__image">
-            <img src="assets/room-3.jpg" alt="room" />
-            <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Entrada-Hotel-1.jpeg" alt="Entrada-Hotel-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Entrada del Hotel</h3>
+              </div>
             </div>
-          </div>
-          <div class="room__card__details">
-            <h4>Family Garden Retreat</h4>
-            <p>
-              Spacious and inviting, perfect for creating cherished memories
-              with loved ones.
-            </p>
-            <h5>Starting from <span>$249/night</span></h5>
-            <button class="btn">Book Now</button>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Estacionamiento-1.jpeg" alt="Enstacionamiento-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Estacionamiento del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Hotel-Cancha-1.jpeg" alt="Hotel-Cancha-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Cancha del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Hotel-Cancha-2.jpeg" alt="Hotel-Cancha-2">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Cancha del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Hotel-Habitaciones-1.jpeg" alt="Hotel-Habitaciones-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Habitaciones del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Hotel-Habitaciones-2.jpeg" alt="Hotel-Habitaciones-2">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Habitaciones del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Hotel-Habitaciones-3.jpeg" alt="Hotel-Habitaciones-3">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Habitaciones del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Pasillo-1.jpeg" alt="Pasillo-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Pasillo del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Recepcion-1.jpeg" alt="Recepcion-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Recepcion del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Salon-Eventos-1.jpeg" alt="Salon-Eventos-1">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Salon de Eventos del Hotel</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="img">
+                <img src="/ImagenesHotel/Salon-Eventos-2.jpeg" alt="Salon-Eventos-2">
+              </div>
+              <div class="overlay">
+                <i class="ri-add-line"></i>
+                <h3>Salon de Eventos del Hotel</h3>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
+
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Carrusel de galería (comportamiento original)
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1024: { items: 3 }
+          }
+        });
+        
+
+      });
+    </script>
+
+
+
+    <section class="rooms-section">
+      <div class="section__container">
+        <div class="heading">
+          <p class="section__subheader">Explora</p>
+          <h2 class="section__header">Las Habitaciones</h2>
+        </div>
+
+        <div class="rooms-grid">
+          <!-- Habitación Baño Compartido -->
+          <div class="room-card">
+            <div class="room-image">
+              <img src="/ImagenesHotel/Baño-Compartido-1.jpeg" alt="Baño-Compartido-1">
+            </div>
+            <div class="room-text">
+              <div class="room-header">
+                <h2>Habitación Baño Compartido</h2>
+                <div class="price-display">
+                  <span class="room-price">80</span>
+                  <span class="currency"> Bs</span>
+                  <span class="price-period">   Por Noche</span>
+                </div>
+              </div>
+              <!-- Iconos en tu HTML -->
+              <div class="room-rate">
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-wifi"></i> WiFi
+                  </span>
+                </div>
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-fan"></i> Ventilador
+                  </span>
+                </div>
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-tv"></i> TV
+                  </span>
+                </div>
+              </div>
+              <div class="room-description" style="display: none;">
+                <div class="room-options">
+                  <h4>Cantidad de Personas (Por dia):</h4>
+                  <label><input type="radio" name="tipo-bcompartido" value="150" data-group="personas"> Cuádruple + 150Bs</label>
+                  <label><input type="radio" name="tipo-bcompartido" value="120" data-group="personas"> Triple + 120Bs</label>
+                  <label><input type="radio" name="tipo-bcompartido" value="80" data-group="personas" checked> Matrimonial + 80Bs</label>
+                  <label><input type="radio" name="tipo-bcompartido" value="70" data-group="personas"> Individual + 70Bs</label>
+                  
+                  <h4>Pieza Por Horas (Solo para parejas)</h4>
+                  <label><input type="radio" name="tipo-bcompartido" value="60" data-group="horas"> 3 Horas + 60Bs</label>
+                  <label><input type="radio" name="tipo-bcompartido" value="50" data-group="horas"> 2 Horas + 50Bs</label>
+                  <label><input type="radio" name="tipo-bcompartido" value="40" data-group="horas"> 1 Hora + 40Bs</label>
+                  
+                  <h4>Precio Especial Para Delegaciones (Por dia)</h4>
+                  <label><input type="radio" name="tipo-bcompartido" value="35" data-group="delegacion"> Por Persona +35Bs</label>
+                  
+                  <h4>Servicios Extra (Por Dia/Horas)</h4>
+                  <label><input type="checkbox" name="aire-bcompartido" value="30"> Aire Acondicionado + 30Bs</label>
+                </div>
+              </div>
+              <div class="room-button">
+                <button class="btn toggle-btn" data-state="view">Ver Precios</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Habitación Baño Privado -->
+          <div class="room-card">
+            <div class="room-image">
+              <img src="/ImagenesHotel/Baño-Privado-1.jpeg" alt="Baño-Privado-1">
+            </div>
+            <div class="room-text">
+              <div class="room-header">
+                <h2>Habitación Baño Compartido</h2>
+                <div class="price-display">
+                  <span class="room-price">110</span>
+                  <span class="currency"> Bs</span>
+                  <span class="price-period">   Por Noche</span>
+                </div>
+              </div>
+              <!-- Iconos en tu HTML -->
+              <div class="room-rate">
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-wifi"></i> WiFi
+                  </span>
+                </div>
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-fan"></i> Ventilador
+                  </span>
+                </div>
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-tv"></i> TV
+                  </span>
+                </div>
+                <div>
+                  <span class="amenity">
+                    <i class="fa-solid fa-toilet"></i> Baño
+                  </span>
+                </div>
+              </div>
+              <div class="room-description" style="display: none;">
+                <div class="room-options">
+                  <h4>Cantidad de Personas (Por dia):</h4>
+                  <label><input type="radio" name="tipo-bprivado" value="200" data-group="personas"> Cuádruple + 200Bs</label>
+                  <label><input type="radio" name="tipo-bprivado" value="150" data-group="personas"> Triple + 150Bs</label>
+                  <label><input type="radio" name="tipo-bprivado" value="110" data-group="personas" checked> Matrimonial + 110Bs</label>
+                  <label><input type="radio" name="tipo-bprivado" value="100" data-group="personas"> Individual + 100Bs</label>
+                  
+                  <h4>Pieza Por Horas (Solo para parejas)</h4>
+                  <label><input type="radio" name="tipo-bprivado" value="90" data-group="horas"> 3 Horas + 90Bs</label>
+                  <label><input type="radio" name="tipo-bprivado" value="70" data-group="horas"> 2 Horas + 70Bs</label>
+                  <label><input type="radio" name="tipo-bprivado" value="50" data-group="horas"> 1 Hora + 50Bs</label>
+                  
+                  <h4>Precio Especial Para Delegaciones (Por dia)</h4>
+                  <label><input type="radio" name="tipo-bprivado" value="45" data-group="delegacion"> Por Persona +45Bs</label>
+                  
+                  <h4>Servicios Extra (Por Dia/Horas)</h4>
+                  <label><input type="checkbox" name="aire-bprivado" value="30"> Aire Acondicionado + 30Bs</label>
+                </div>
+              </div>
+              <div class="room-button">
+                <button class="btn toggle-btn" data-state="view">Ver Precios</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Configuración base para cada tipo de habitación
+        const roomConfig = {
+          'bcompartido': {
+            basePrice: 0,
+            defaultPeriod: '   Por Noche'
+          },
+          'bprivado': {
+            basePrice: 0,
+            defaultPeriod: '   Por Noche'
+          }
+        };
+        
+        // Función para actualizar precio y período
+        function updatePriceAndPeriod(roomCard) {
+          const imgAlt = roomCard.querySelector('.room-image img').alt;
+          const roomType = imgAlt.includes('Privado') ? 'bprivado' : 'bcompartido';
+          let total = roomConfig[roomType].basePrice;
+          let periodText = roomConfig[roomType].defaultPeriod;
+          
+          // Obtener todas las opciones seleccionadas
+          const checkedInputs = roomCard.querySelectorAll('.room-options input:checked');
+          
+          checkedInputs.forEach(input => {
+            total += parseInt(input.value) || 0;
+            
+            // Determinar el texto del período basado en la selección
+            if (input.name.includes('tipo-') && input.getAttribute('data-group') === 'horas') {
+              const hoursMatch = input.parentElement.textContent.match(/(\d+)\s*Hora/);
+              if (hoursMatch) {
+                const hours = hoursMatch[1];
+                periodText = hours === '1' ? '   Por Hora' : `   Por ${hours} Horas`;
+              }
+            }
+          });
+          
+          // Actualizar la UI
+          roomCard.querySelector('.room-price').textContent = total;
+          roomCard.querySelector('.price-period').textContent = periodText;
+        }
+        
+        // Configurar los event listeners para los inputs
+        function setupPriceCalculators() {
+          document.querySelectorAll('.room-options input').forEach(input => {
+            input.addEventListener('change', function() {
+              const roomCard = this.closest('.room-card');
+              
+              // Manejar radios para selección única por grupo
+              if (this.type === 'radio') {
+                const groupName = this.getAttribute('data-group');
+                if (groupName) {
+                  roomCard.querySelectorAll(`input[data-group="${groupName}"]`).forEach(radio => {
+                    if (radio !== this) radio.checked = false;
+                  });
+                }
+              }
+              
+              updatePriceAndPeriod(roomCard);
+            });
+          });
+        }
+        
+        // Función para los botones de mostrar/ocultar
+        function setupToggleButtons() {
+          document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+              e.preventDefault();
+              const card = this.closest('.room-card');
+              const description = card.querySelector('.room-description');
+              
+              if (description.style.display === 'block' || 
+                  getComputedStyle(description).display === 'block') {
+                description.style.display = 'none';
+                this.textContent = 'Ver Precios';
+                this.setAttribute('data-state', 'view');
+              } else {
+                description.style.display = 'block';
+                this.textContent = 'Ocultar';
+                this.setAttribute('data-state', 'hide');
+              }
+            });
+          });
+        }
+
+        // Inicialización
+        setupToggleButtons();
+        setupPriceCalculators();
+        
+        // Establecer valores iniciales
+        document.querySelectorAll('.room-card').forEach(card => {
+          updatePriceAndPeriod(card);
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+
 
     <section class="service" id="service">
-     <div class="section__container service__container">
-    <div class="service__content">
-      <p class="section__subheader">Beneficios Incluidos</p>
-      <h2 class="section__header">¡Ya Viene Contigo!</h2>
-      <p class="section__description">
-        Todo esto lo tienes gratis desde que reservas con nosotros.
-      </p>
-      <ul class="service__list">
-        <li>
-          <span><i class="ri-parking-box-line"></i></span>
-          Estacionamiento privado
-        </li>
-        <li>
-          <span><i class="ri-leaf-line"></i></span>
-          Zona natural rodeada de árboles
-        </li>
-        <li>
-          <span><i class="ri-football-line"></i></span>
-          Cancha para deportes o juegos
-        </li>
-        <li>
-          <span><i class="ri-map-pin-2-line"></i></span>
-          Consejos turísticos y mapas gratuitos
-        </li>
-        <li>
-          <span><i class="ri-wifi-line"></i></span>
-          Wi-Fi rápido en todo el hotel
-        </li>
-      </ul>
-    </div>
-  </div>
+      <div class="section__container service__container">
+        <div class="service__content">
+          <p class="section__subheader">Beneficios Incluidos</p>
+          <h2 class="section__header">¡Ya Viene Contigo!</h2>
+          <p class="section__description">
+            Todo esto lo tienes gratis desde que reservas con nosotros.
+          </p>
+          <ul class="service__list">
+            <li>
+              <span><i class="ri-parking-box-line"></i></span>
+              Estacionamiento privado
+            </li>
+            <li>
+              <span><i class="ri-leaf-line"></i></span>
+              Zona natural rodeada de árboles
+            </li>
+            <li>
+              <span><i class="ri-football-line"></i></span>
+              Cancha para deportes o juegos
+            </li>
+            <li>
+              <span><i class="ri-map-pin-2-line"></i></span>
+              Consejos turísticos y mapas gratuitos
+            </li>
+            <li>
+              <span><i class="ri-wifi-line"></i></span>
+              Wi-Fi rápido en todo el hotel
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     
     
 
 
     <section class="services" id="servicios">
-  <div class="services__wrapper">
-    <!-- Columna izquierda -->
-    <div class="services__left">
-      <div class="services__heading">
-  <h1 class="services__title-bg sr-fade-up">EXTRAS</h1>
-  <h2 class="services__title sr-fade-up">Upgrade Disponible</h2>
+      <div class="services__wrapper">
+        <!-- Columna izquierda -->
+        <div class="services__left">
+          <div class="services__heading">
+            <h1 class="services__title-bg sr-fade-up">EXTRAS</h1>
+            <h2 class="services__title sr-fade-up">Upgrade Disponible</h2>
 
-  <!-- Agrupar párrafos en un bloque separado -->
-  <div class="services__description-center">
-    <p class="services__subtitle">Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.</p>
-  </div>
-</div>
-
-      <div class="services__grid">
-        <div class="service-card" data-extra="+2 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
-          <h3>Aire acondicionado</h3>
+            <!-- Agrupar párrafos en un bloque separado -->
+            <div class="services__description-center">
+              <p class="services__subtitle">Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.</p>
+            </div>
+          </div>
+          <div class="services__grid">
+            <div class="service-card" data-extra="+2 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
+              <h3>Aire acondicionado</h3>
+            </div>
+            <div class="service-card" data-extra="+3 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
+              <h3>Desayuno casero</h3>
+            </div>
+            <div class="service-card" data-extra="+30 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
+              <h3>Kiosco de snacks</h3>
+            </div>
+            <div class="service-card" data-extra="+25 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
+              <h3>Noche de cine</h3>
+            </div>
+          </div>
         </div>
-        <div class="service-card" data-extra="+3 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3>Desayuno casero</h3>
-        </div>
-        <div class="service-card" data-extra="+30 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
-          <h3>Kiosco de snacks</h3>
-        </div>
-        <div class="service-card" data-extra="+25 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
-          <h3>Noche de cine</h3>
+        <!-- Columna derecha -->
+      <div class="services__right">
+        <div class="zoom-container">
+          <img src="/assets/hotel-fachada.jpg" alt="Hotel exterior" class="scroll-zoom" />
         </div>
       </div>
-    </div>
-
-    <!-- Columna derecha -->
-    <div class="services__right">
-  <div class="zoom-container">
-    <img src="/assets/hotel-fachada.jpg" alt="Hotel exterior" class="scroll-zoom" />
-  </div>
-</div>
-</section>
-
-
-<section class="service" id="service">
-     <div class="section__container service__container">
-    <div class="service__content">
-      <p class="section__subheader">Beneficios Incluidos</p>
-      <h2 class="section__header">¡Ya Viene Contigo!</h2>
-      <p class="section__description">
-        Todo esto lo tienes gratis desde que reservas con nosotros.
-      </p>
-      <ul class="service__list">
-        <li>
-          <span><i class="ri-parking-box-line"></i></span>
-          Estacionamiento privado
-        </li>
-        <li>
-          <span><i class="ri-leaf-line"></i></span>
-          Zona natural rodeada de árboles
-        </li>
-        <li>
-          <span><i class="ri-football-line"></i></span>
-          Cancha para deportes o juegos
-        </li>
-        <li>
-          <span><i class="ri-map-pin-2-line"></i></span>
-          Consejos turísticos y mapas gratuitos
-        </li>
-        <li>
-          <span><i class="ri-wifi-line"></i></span>
-          Wi-Fi rápido en todo el hotel
-        </li>
-      </ul>
-    </div>
-  </div>
     </section>
 
 
     <section class="explore" id="explore">
       <p class="section__subheader">UBICACIÓN</p>
       <h2 class="section__header">Encuéntranos en Bermejo, Tarija</h2>
-    <div class="map__container">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8535639886794!2d-64.9657881256508!3d-22.723998531647056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f9576fd91e17%3A0x858d42f6fc4b1e86!2sBermejo%2C%20Tarija!5e0!3m2!1ses!2sbo!4v1716123784707!5m2!1ses!2sbo"
-    width="100%"
-    height="450"
-    style="border:0; border-radius: 10px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
+      <div class="map__container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8535639886794!2d-64.9657881256508!3d-22.723998531647056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f9576fd91e17%3A0x858d42f6fc4b1e86!2sBermejo%2C%20Tarija!5e0!3m2!1ses!2sbo!4v1716123784707!5m2!1ses!2sbo"
+          width="100%"
+          height="450"
+          style="border:0; border-radius: 10px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </section>
 
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="logo">
-            <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
+            <a href="#home"><img src="/ImagenesHotel/Logo-Hotel.png" alt="Logo-Hotel" /></a>
           </div>
           <p class="section__description">
             Discover a world of comfort, luxury, and adventure as you explore
@@ -334,7 +620,7 @@ import '../styles/styles.css';
         </div>
       </div>
       <div class="footer__bar">
-        Copyright © 2023 Web Design Mastery. All rights reserved.
+        Copyright © 2025 Grupo Nameless. Todos los derechos Reservados.
       </div>
     </footer>
 
@@ -342,7 +628,12 @@ import '../styles/styles.css';
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="/src/scripts/main.js"></script>
   
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="/src/scripts/carousel.js"></script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+
+
   </body>
 </html>
