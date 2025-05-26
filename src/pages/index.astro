@@ -5,30 +5,23 @@ import '../styles/styles.css';
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- ya puede haber cosas aquí -->
-    <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
-  
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Tariquia</title>
-
     <meta name="description" content="Hotel Tariquia - Disfruta de una estancia única en Bermejo, Tarija. Ofrecemos comodidad y servicios excepcionales.">
 
+    <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <!-- Agrega esto en el <head> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- jQuery (cargar primero) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
   </head>
@@ -40,7 +33,7 @@ import '../styles/styles.css';
         <img src="assets/foto7.jpg" class="carousel-image" alt="Imagen 3" />
         <img src="assets/foto8.jpg" class="carousel-image" alt="Imagen 4" />
       </div>
-      <nav>
+      <nav class="nav-with-gradient">
         <div class="nav__bar">
           <div class="logo">
             <a href="#"><img src="/ImagenesHotel/Logo-Hotel.png" alt="Logo-Hotel" /></a>
@@ -56,15 +49,21 @@ import '../styles/styles.css';
           <li><a href="#explore">Explorar</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-        <button class="btn nav__btn">WhatsApp</button>
+
+        <a href="https://web.whatsapp.com/send?phone=59178242429&text=Hola%20Hotel%20Tariquia,%20quisiera%20hacer%20una%20reserva." 
+          class="btn nav__btn" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> WhatsApp Web
+        </a>
       </nav>
+
+      
       <div class="section__container header__container" id="home">
         <p>Sencillo - Único - Amigable</p>
         <h1>Siéntase como en casa<br />En nuestro <span>Hotel</span>.</h1>
       </div>
     </header>
-
-    
 
     <section class="section__container about__container" id="about">
       <div class="about__image">
@@ -79,51 +78,47 @@ import '../styles/styles.css';
       </div>
     </section>
 
-    
+    <!-- TÍTULO DEL HOTEL -->
+    <div class="elhotel__heading">
+      <span class="elhotel__title-bg">EXPLORA</span>
+      <h2 class="elhotel__title">El Hotel</h2>
+    </div>
 
-
-
-<!-- 🏨 TÍTULO DEL HOTEL CON ESTILO -->
-<div class="elhotel__heading">
-  <span class="elhotel__title-bg">EXPLORA</span>
-  <h2 class="elhotel__title">El Hotel</h2>
-</div>
-
-<!-- 🏨 CARRUSEL DE IMÁGENES HORIZONTAL -->
-<div class="gallery">
-  <div class="owl-carousel owl-theme">
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Entrada-Hotel-1.jpeg" alt="Entrada del Hotel">
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div class="gallery">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Entrada-Hotel-1.jpeg" alt="Entrada del Hotel">
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Estacionamiento-1.jpeg" alt="Estacionamiento">
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Hotel-Cancha-1.jpeg" alt="Cancha del Hotel">
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Hotel-Habitaciones-1.jpeg" alt="Habitaciones">
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Pasillo-1.jpeg" alt="Pasillo">
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="/ImagenesHotel/Salon-Eventos-1.jpeg" alt="Salon de eventos">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Estacionamiento-1.jpeg" alt="Estacionamiento">
-      </div>
-    </div>
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Hotel-Cancha-1.jpeg" alt="Cancha del Hotel">
-      </div>
-    </div>
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Hotel-Habitaciones-1.jpeg" alt="Habitaciones">
-      </div>
-    </div>
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Pasillo-1.jpeg" alt="Pasillo">
-      </div>
-    </div>
-    <div class="item">
-      <div class="img">
-        <img src="/ImagenesHotel/Salon-Eventos-1.jpeg" alt="Salon de eventos">
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <script is:inline>
@@ -152,9 +147,9 @@ import '../styles/styles.css';
     <section class="rooms-section">
       <div class="section__container">
         <div class="habitaciones__heading">
-  <span class="habitaciones__title-bg">EXPLORA</span>
-  <h2 class="habitaciones__title">Las Habitaciones</h2>
-</div>
+          <span class="habitaciones__title-bg">EXPLORA</span>
+          <h2 class="habitaciones__title">Las Habitaciones</h2>
+        </div>
 
         <div class="rooms-grid">
           <!-- Habitación Baño Compartido -->
@@ -171,7 +166,6 @@ import '../styles/styles.css';
                   <span class="price-period">   Por Noche</span>
                 </div>
               </div>
-              <!-- Iconos en tu HTML -->
               <div class="room-rate">
                 <div>
                   <span class="amenity">
@@ -222,14 +216,13 @@ import '../styles/styles.css';
             </div>
             <div class="room-text">
               <div class="room-header">
-                <h2>Habitación Baño Compartido</h2>
+                <h2>Habitación Baño Privado</h2>
                 <div class="price-display">
                   <span class="room-price">110</span>
                   <span class="currency"> Bs</span>
                   <span class="price-period">   Por Noche</span>
                 </div>
               </div>
-              <!-- Iconos en tu HTML -->
               <div class="room-rate">
                 <div>
                   <span class="amenity">
@@ -380,12 +373,6 @@ import '../styles/styles.css';
 
 
 
-
-
-
-
-
-
     <section class="service" id="service">
       <div class="section__container service__container">
         <div class="service__content">
@@ -421,66 +408,62 @@ import '../styles/styles.css';
     </section>
     
 
-<section class="services" id="servicios">
-  <div class="services__wrapper">
-    <div class="services__left">
-      <!-- 🎨 Encabezado EXTRAS con estilo tipo sombra y degradado -->
-      <div class="upgrade__heading">
-  <div class="upgrade__title-bg">EXTRAS</div>
-  <h2 class="upgrade__title">Upgrade Disponible</h2>
-</div>
+    <section class="services" id="servicios">
+      <div class="services__wrapper">
+        <div class="services__left">
+          <div class="upgrade__heading">
+            <div class="upgrade__title-bg">EXTRAS</div>
+            <h2 class="upgrade__title">Upgrade Disponible</h2>
+          </div>
+          <p class="upgrade__description">
+            Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.
+          </p>
 
-<p class="upgrade__description">
-  Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.
-</p>
+          <div class="services__grid">
+            <div class="service-card" data-extra="+30 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
+              <h3>Aire Acondicionado</h3>
+            </div>
+            <div class="service-card" data-extra="+10 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
+              <h3>Desayuno casero</h3>
+            </div>
+            <div class="service-card" data-extra="Gratis">
+              <div class="service-card__icon"><i class="fa-solid fa-square-parking"></i></div>
+              <h3>Estacionamiento</h3>
+            </div>
+            <div class="service-card" data-extra="+5 Bs">
+              <div class="service-card__icon"><i class="fa-solid fa-cubes"></i></div>
+              <h3>Hielo</h3>
+            </div>
+          </div>
+        </div>
 
-      <!-- 🎨 Grid de las cards de servicios -->
-      <div class="services__grid">
-        <div class="service-card" data-extra="+2 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
-          <h3>Aire acondicionado</h3>
-        </div>
-        <div class="service-card" data-extra="+3 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3>Desayuno casero</h3>
-        </div>
-        <div class="service-card" data-extra="+30 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
-          <h3>Kiosco de snacks</h3>
-        </div>
-        <div class="service-card" data-extra="+25 Bs">
-          <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
-          <h3>Noche de cine</h3>
+        <div class="services__right">
+          <img src="/assets/foto9.jpg" alt="Hotel exterior">
         </div>
       </div>
-    </div>
-
-    <!-- 📸 Imagen del lado derecho -->
-    <div class="services__right">
-      <img src="/assets/foto9.jpg" alt="Hotel exterior">
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
 
 
-<section class="explore" id="explore" style="padding-top: 2rem; margin-top: 1rem;">
-  <p class="section__subheader" style="margin-bottom: 0.2rem;">UBICACIÓN</p>
-  <h2 class="section__header" style="margin-bottom: 1rem;">Encuéntranos en Bermejo, Tarija</h2>
-  <div class="map__container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8535639886794!2d-64.9657881256508!3d-22.723998531647056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f9576fd91e17%3A0x858d42f6fc4b1e86!2sBermejo%2C%20Tarija!5e0!3m2!1ses!2sbo!4v1716123784707!5m2!1ses!2sbo"
-      width="100%"
-      height="450"
-      style="border:0; border-radius: 10px;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</section>
+    <section class="explore" id="explore" style="padding-top: 2rem; margin-top: 1rem;">
+      <p class="section__subheader" style="margin-bottom: 0.2rem;">UBICACIÓN</p>
+      <h2 class="section__header" style="margin-bottom: 1rem;">Encuéntranos en Bermejo, Tarija</h2>
+      <div class="map__container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3517.142334569575!2d-64.33215062475601!3d-22.72594669094902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sbo!4v1748286375298!5m2!1ses-419!2sbo" 
+          width="100%"
+          height="450"
+          style="border:0; border-radius: 10px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
 
 
     <footer class="footer" id="contact">
@@ -490,51 +473,55 @@ import '../styles/styles.css';
             <a href="#home"><img src="/ImagenesHotel/Logo-Hotel.png" alt="Logo-Hotel" /></a>
           </div>
           <p class="section__description">
-            Discover a world of comfort, luxury, and adventure as you explore
-            our curated selection of hotels, making every moment of your getaway
-            truly extraordinary.
+            Descubre un mundo de comodidad y aventura en Hotel Tariquia. Ubicados en el corazón de Bermejo, Tarija, ofrecemos una experiencia única que hará de tu estadía algo verdaderamente extraordinario.
           </p>
-          <button class="btn">Book Now</button>
+
         </div>
         <div class="footer__col">
-          <h4>QUICK LINKS</h4>
+          <h4>ENLACES RÁPIDOS</h4>
           <ul class="footer__links">
-            <li><a href="#">Browse Destinations</a></li>
-            <li><a href="#">Special Offers & Packages</a></li>
-            <li><a href="#">Room Types & Amenities</a></li>
-            <li><a href="#">Customer Reviews & Ratings</a></li>
-            <li><a href="#">Travel Tips & Guides</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#service">Servicios Incluidos</a></li>
+            <li><a href="#servicios">Servicios Extra</a></li>
+            <li><a href="#explore">Ubicación</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>OUR SERVICES</h4>
+          <h4>NUESTROS SERVICIOS</h4>
           <ul class="footer__links">
-            <li><a href="#">Concierge Assistance</a></li>
-            <li><a href="#">Flexible Booking Options</a></li>
-            <li><a href="#">Airport Transfers</a></li>
-            <li><a href="#">Wellness & Recreation</a></li>
+            <li><a href="#service">Estacionamiento Privado</a></li>
+            <li><a href="#service">Wi-Fi Gratuito</a></li>
+            <li><a href="#servicios">Aire Acondicionado</a></li>
+            <li><a href="#servicios">Desayuno Casero</a></li>
+            <li><a href="#service">Cancha Deportiva</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>CONTACT US</h4>
+          <h4>CONTÁCTANOS</h4>
           <ul class="footer__links">
-            <li><a href="#">rayalpark@info.com</a></li>
+            <li><a href="mailto:hoteltariquia@gmail.com">hotel.tariquia@gmail.com</a></li>
+            <li><a href="tel:+59146123456">+591 4612-3456</a></li>
+            <li><span>Bermejo, Tarija - Bolivia</span></li>
           </ul>
           <div class="footer__socials">
-            <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
-            <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
-            <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
-            <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+            <a href="https://www.facebook.com/p/Hotel-Eco-Tours-Tariquia-Bermejo-Tarija-Bolivia-100063664836007/" target="_blank" rel="noopener"><img src="assets/facebook.png" alt="facebook" /></a>
+            <a href="https://www.instagram.com/hoteltariquia/" target="_blank" rel="noopener"><img src="assets/instagram.png" alt="instagram" /></a>
+            <a href="https://www.youtube.com/@HotelTariquia" target="_blank" rel="noopener"><img src="assets/youtube.png" alt="youtube" /></a>
+            <a href="https://web.whatsapp.com/send?phone=59178242429&text=Hola%20Hotel%20Tariquia,%20estoy%20interesado%20en%20reservar.%20¿Podrían%20ayudarme?" target="_blank" rel="noopener">
+              <img src="assets/whatsapp.png" alt="whatsapp" />
+            </a>
           </div>
         </div>
       </div>
       <div class="footer__bar">
-        Copyright © 2025 Grupo Nameless. Todos los derechos Reservados.
+        Copyright © 2025 Hotel Tariquia. Todos los derechos reservados.
       </div>
     </footer>
 
-    <!-- ✅ Scripts externos -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <script type="module" src="/src/scripts/main.js"></script>
   
     <script type="module" src="/src/scripts/carousel.js"></script>
