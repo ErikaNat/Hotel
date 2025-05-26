@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #e82574;
-  --primary-color-dark: #bc1c5c;
+  --primary-color: #308446;
+  --primary-color-dark: #246333;
   --text-dark: #0c0a09;
   --text-light: #78716c;
   --white: #ffffff;
@@ -61,14 +61,14 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--primary-color);
+  background-color: #308446;  /* Cambiado a verde */
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: #246333; /* Hover verde oscuro */
 }
 
 img {
@@ -149,9 +149,29 @@ nav {
   display: none;
 }
 
-.header__container {
-  padding-block: 10rem 15rem;
+
+.header {
+  position: relative;
+  height: 100vh; /* O ajusta la altura según tu necesidad, por ejemplo: 80vh */
+  overflow: hidden;
 }
+
+
+.header__container {
+  position: absolute;
+  top: 55%; /* Centro vertical */
+  left: 50%; /* Centro horizontal */
+  transform: translate(-50%, -50%); /* Alinear exacto al centro */
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.header-carousel {
+  height: 100vh; /* 🔼 Ajusta para cubrir toda la pantalla */
+}
+
 
 .header__container p {
   margin-bottom: 1rem;
@@ -224,10 +244,16 @@ nav {
 }
 
 .about__container {
-  overflow: hidden;
   display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔼 Asegura dos columnas para imagen y texto */
   gap: 2rem;
+  padding-top: 9rem; /* 🔼 Controla altura superior */
+  max-width: 1200px; /* 🔼 Ancho máximo */
+  margin: 0 auto; /* 🔼 Centrado horizontal */
+  padding-left: 2rem; /* 🔼 Espacio lateral izquierdo */
+  padding-right: 2rem; /* 🔼 Espacio lateral derecho */
 }
+
 
 .about__image img {
   max-width: 450px;
@@ -316,7 +342,7 @@ nav {
 }
 
 .service {
-  background-image: url("assets/service.jpg");
+  background-image: url("assets/foto9.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -452,13 +478,13 @@ nav {
 
 .explore__content .btn {
   color: var(--primary-color);
-  background-color: var(--white);
+  background-color: #308446;
   border: 1px solid var(--primary-color);
 }
 
 .explore__content .btn:hover {
   color: var(--white);
-  background-color: var(--primary-color);
+  background-color: #246333;
 }
 
 .footer {
@@ -600,11 +626,11 @@ nav {
 .services__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem; /* 🔽 Ajusta el padding general */
 }
 
 
@@ -616,10 +642,10 @@ nav {
 
 
 .services {
-  padding: 6rem 1rem;
+  padding: 2rem 2rem;
   background-color: #fff;
-  margin-bottom: 0rem; /* ✅ Nuevo: Separación hacia la siguiente sección */
 }
+
 
 
 .services__left {
@@ -628,33 +654,90 @@ nav {
   justify-content: center;
 }
 
+.services__heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: -10rem;
+}
+
 .services__title-bg {
-  font-size: 5rem;
-  opacity: 0.08;
+  font-size: 6rem;
+  opacity: 0.05;
   font-family: serif;
-  margin-bottom: -1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  white-space: nowrap;
 }
 
 .services__title {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #111;
-  margin-bottom: 0rem;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .services__subtitle {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 2rem;
   max-width: 500px;
+  margin: 0.2rem auto;
+  color: #555;
+  position: relative;
+  z-index: 1;
 }
 
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 0rem;
+  margin-top: 1rem; /* 🔽 Reduce margen superior */
 }
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card__icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #7fc142;
+}
+
+.services__right img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
 
 .service-card {
   position: relative;
@@ -714,7 +797,7 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .services__title-bg {
@@ -755,7 +838,7 @@ nav {
 }
 
 .services__heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .services__title {
@@ -809,11 +892,25 @@ nav {
 }
 
 .zoom-container {
-  overflow: hidden;
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px; /* 🔸 Aumenta tamaño máximo */
+  margin: 2rem auto; /* 🔸 Centra horizontalmente */
+}
+
+.zoom-container img {
   width: 100%;
-  max-width: 700px;
-  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  height: auto; /* 🔸 Mantiene proporción */
+}
+
+.zoom-container img.scroll-zoom {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 .zoom-container img {
@@ -892,10 +989,9 @@ nav {
   gap: 1.5rem;
 }
 
-
 .explore {
-  padding-top: 6rem;
-  margin-top: 3rem; /* ✅ Nuevo: espacio adicional debajo del bloque anterior */
+  padding-top: 0rem;
+  margin-top: -20rem; /* ✅ Nuevo: espacio adicional debajo del bloque anterior */
 }
 
 .map__container {
@@ -904,26 +1000,11 @@ nav {
   margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Gallery Styles */
 .gallery {
   position: relative;
   padding: 5rem 0;
-  background-color: #f9f9f9;
+  background-color: transparent; /* Fondo sin color */
 }
 
 .gallery .heading {
@@ -940,7 +1021,11 @@ nav {
 
 .gallery .img {
   position: relative;
-  overflow: hidden;
+
+
+
+
+
   border-radius: 8px;
 }
 
@@ -1021,14 +1106,6 @@ nav {
   display: block;
 }
 
-
-
-
-
-
-
-
-
 .room-item {
   background: #fff;
   border-radius: 10px;
@@ -1105,14 +1182,6 @@ nav {
   font-weight: normal;
 }
 
-
-
-
-
-
-
-
-
 /* Rooms Section Styles */
 .rooms-section {
   padding: 5rem 0;
@@ -1142,8 +1211,6 @@ nav {
   height: 250px;
   overflow: hidden;
 }
-
-
 
 .room-text {
   padding: 1.5rem;
@@ -1188,11 +1255,6 @@ nav {
   font-weight: normal;
 }
 
-
-
-
-
-
 /* Agrega esto al final de tu CSS */
 .room-options {
   padding: 1rem 0;
@@ -1226,4 +1288,398 @@ nav {
 .room-price {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+/* 🎨 Título EXPLORA y El Hotel perfectamente centrado */
+.explore__heading {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.explore__title-bg {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  user-select: none;
+}
+
+.explore__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* 📍 Subir el título "El Hotel" (si fuera necesario) */
+.services__heading {
+  margin-top: 4rem;
+}
+
+.services__heading .services__title {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* 📍 Botones de navegación estilizados y ajustados */
+.gallery .owl-nav {
+  position: absolute;
+  top: -90px; /* Subir los botones más arriba */
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.gallery .owl-nav button {
+  background-color: transparent !important;
+  border: none !important;
+  color: #308446 !important;
+  font-size: 2rem !important;
+  transition: all 0.3s ease;
+}
+
+.gallery .owl-nav button:hover {
+  background-color: #308446 !important;
+  color: #ffffff !important;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .owl-nav button svg {
+  fill: #308446 !important;
+  transition: fill 0.3s ease;
+}
+
+.gallery .owl-nav button:hover svg {
+  fill: #ffffff !important;
+}
+
+
+.gallery .owl-nav button:active {
+  background-color: #308446 !important;
+  color: white !important;
+}
+
+
+/* 📍 Ajustar separación lateral de las imágenes */
+.owl-carousel .item {
+  padding: 0 8px;
+}
+
+.gallery {
+  padding: 4rem 1rem;
+}
+
+/* 🎨 Estilo EXPLORA con Las Habitaciones */
+.habitaciones__heading {
+  position: relative;
+  margin-top: -5rem;  /* Sube el título */
+  margin-bottom: 4rem;  /* Espacio debajo */
+  text-align: center;
+}
+
+.habitaciones__title-bg {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  user-select: none;
+}
+
+.habitaciones__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+/* Efecto de degradado animado */
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Si quieres más separación entre el título y las tarjetas */
+.room__grid {
+  margin-top: 5rem;
+}
+
+
+
+/* 🎨 Título EXPLORA con "El Hotel" igual que "Las Habitaciones" */
+.elhotel__heading {
+  position: relative;
+  margin-top: 4rem;  /* Ajusta según tu diseño */
+  margin-bottom: 4rem;  /* Espacio debajo del título */
+  text-align: center;
+}
+
+.elhotel__title-bg {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  user-select: none;
+}
+
+.elhotel__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+/* Efecto de degradado animado */
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+
+.room-rate .amenity {
+  color: #38bdf8; /* 🎨 Celeste igual que el título */
+}
+
+.room__grid {
+  margin-top: 5rem;
+}
+
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem; /* 🔽 Ajusta el padding general */
+}
+
+.services__title-bg {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.services__title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.services__subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+/* 🎯 ESTILO CORRECTO PARA UPGRADE DISPONIBLE */
+.services {
+  padding: 2rem 2rem;
+  background-color: #fff;
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: -1rem 2rem; /* 🔽 Ajusta el padding general */
+}
+
+
+.services__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services__heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: -20rem;
+}
+
+.services__title-bg {
+  font-size: 10rem;
+  opacity: 0.05;
+  font-family: serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.services__title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.services__subtitle {
+  max-width: 600px;            /* Ancho máximo más amplio */
+  margin-top: -4rem;            /* Espacio arriba (puedes ajustar a -1rem si lo quieres más pegado) */
+  margin-bottom: 1rem;         /* Espacio debajo */
+  color: #555;
+  text-align: center;          /* CENTRADO DEL TEXTO */
+  position: relative;
+  z-index: 1;
+  margin-left: auto;           /* CENTRAR horizontalmente */
+  margin-right: auto;          /* CENTRAR horizontalmente */
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem; /* 🔽 Reduce margen superior */
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card__icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #7fc142;
+}
+
+.services__right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25rem; /* ⚫ Puedes agregar aquí */
+}
+
+.services__right img {
+  width: 100%;
+  max-width: 600px; /* Tamaño grande */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  height: auto;
+  margin-top: -13.5rem; /* ⚫ MUEVE LA IMAGEN */
+}
+
+/* 🔥 ESTILO CORREGIDO PARA EL TÍTULO DE "EXTRAS" */
+.upgrade__heading {
+  position: relative;
+  margin-top: -17rem;   /* 🔼 Sube aún más arriba */
+  margin-bottom: 4rem;  /* Espacio debajo del título */
+  text-align: center;
+}
+
+.upgrade__title-bg {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  user-select: none;
+}
+
+.upgrade__title {
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #308446, #38bdf8, #308446);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.upgrade__description {
+  max-width: 600px;
+  margin: -3rem auto 1rem;  /* 🔽 Aumenta margen superior para alejar de título */
+  color: #555;
+  text-align: center;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+
+.explore .section__subheader {
+  margin-top: -20rem; /* 🔼 Sube solo el título UBICACIÓN */
 }

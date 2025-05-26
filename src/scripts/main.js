@@ -111,3 +111,94 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+ScrollReveal().reveal(".gallery .section__subheader", {
+  distance: "50px",
+  origin: "left",
+  duration: 1200,
+  delay: 300,
+  opacity: 0,
+  scale: 0.9,
+});
+
+ScrollReveal().reveal(".gallery .section__header", {
+  distance: "50px",
+  origin: "left",
+  duration: 1500,
+  delay: 600,
+  opacity: 0,
+  scale: 0.9,
+});
+
+
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1024: { items: 3 }
+    }
+  });
+});
+
+ScrollReveal().reveal(".habitaciones__heading", {
+  distance: "50px",
+  origin: "left",
+  duration: 1200,
+  delay: 300,
+  opacity: 0,
+  scale: 0.9,
+});
+
+ScrollReveal().reveal(".elhotel__title-bg", {
+  distance: "50px",
+  origin: "left",
+  duration: 1200,
+  delay: 300,
+  opacity: 0,
+  scale: 0.9,
+});
+
+ScrollReveal().reveal(".elhotel__title", {
+  distance: "50px",
+  origin: "right",
+  duration: 1500,
+  delay: 600,
+  opacity: 0,
+  scale: 0.9,
+});
+
+const tituloDinamico = document.querySelector(".service__container .section__header");
+const textos = [
+  "¡Ya Viene Contigo!",
+  "¡Vive la Experiencia!",
+  "¡No te lo pierdas!",
+  "¡Descúbrelo Aquí!"
+];
+let indice = 0;
+
+setInterval(() => {
+  indice = (indice + 1) % textos.length;
+  tituloDinamico.textContent = textos[indice];
+}, 4000);  // Cambia cada 4 segundos
+
+
+const upgradeTitulo = document.querySelector(".upgrade__title");
+const textosUpgrade = [
+  "Upgrade Disponible",
+  "¡Más Comodidad!",
+  "¡Beneficios Extra!",
+  "¡Vívelo Ahora!"
+];
+let indiceUpgrade = 0;
+
+setInterval(() => {
+  indiceUpgrade = (indiceUpgrade + 1) % textosUpgrade.length;
+  upgradeTitulo.textContent = textosUpgrade[indiceUpgrade];
+}, 4000); // Cambia cada 4 segundos

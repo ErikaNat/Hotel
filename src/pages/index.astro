@@ -20,6 +20,10 @@ import '../styles/styles.css';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!-- Agrega esto en el <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,10 +35,10 @@ import '../styles/styles.css';
   <body>
     <header class="header">
       <div class="header-carousel">
-        <img src="assets/header.jpg" class="carousel-image active" alt="Imagen 1" />
-        <img src="assets/foto2.jpg" class="carousel-image" alt="Imagen 2" />
-        <img src="assets/foto3.jpg" class="carousel-image" alt="Imagen 3" />
-        <img src="assets/foto4.jpg" class="carousel-image" alt="Imagen 4" />
+        <img src="assets/foto5.jpg" class="carousel-image active" alt="Imagen 1" />
+        <img src="assets/foto6.jpg" class="carousel-image" alt="Imagen 2" />
+        <img src="assets/foto7.jpg" class="carousel-image" alt="Imagen 3" />
+        <img src="assets/foto8.jpg" class="carousel-image" alt="Imagen 4" />
       </div>
       <nav>
         <div class="nav__bar">
@@ -52,7 +56,7 @@ import '../styles/styles.css';
           <li><a href="#explore">Explorar</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-        <button class="btn nav__btn">Book Now</button>
+        <button class="btn nav__btn">WhatsApp</button>
       </nav>
       <div class="section__container header__container" id="home">
         <p>Sencillo - Único - Amigable</p>
@@ -72,9 +76,6 @@ import '../styles/styles.css';
         <p class="section__description">
           Con un enfoque en alojamientos de calidad, atención personalizada y reservas sin complicaciones, nuestro hotel está comprometido a brindarte una experiencia única. Cada detalle está pensado para que tu viaje sea cómodo, seguro y lleno de momentos inolvidables.
         </p>
-        <div class="about__btn">
-          <button class="btn">Leer Más</button>
-        </div>
       </div>
     </section>
 
@@ -82,142 +83,47 @@ import '../styles/styles.css';
 
 
 
-    <!-- Gallery Section - Versión corregida -->
-    <section class="gallery">
-      <div class="section__container">
-        <div class="heading">
-          <p class="section__subheader">Explora</p>
-          <h2 class="section__header">El Hotel</h2>
-        </div>
+<!-- 🏨 TÍTULO DEL HOTEL CON ESTILO -->
+<div class="elhotel__heading">
+  <span class="elhotel__title-bg">EXPLORA</span>
+  <h2 class="elhotel__title">El Hotel</h2>
+</div>
 
-        <div class="content mtop">
-          <div class="owl-carousel owl-theme">
-            <!-- Todas las imágenes con rutas consistentes -->
-            
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Arreglo-Habitacion-1.jpeg" alt="Arreglo-Habitacion-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Arreglo de Habitacion</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Entrada-Hotel-1.jpeg" alt="Entrada-Hotel-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Entrada del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Estacionamiento-1.jpeg" alt="Enstacionamiento-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Estacionamiento del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Hotel-Cancha-1.jpeg" alt="Hotel-Cancha-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Cancha del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Hotel-Cancha-2.jpeg" alt="Hotel-Cancha-2">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Cancha del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Hotel-Habitaciones-1.jpeg" alt="Hotel-Habitaciones-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Habitaciones del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Hotel-Habitaciones-2.jpeg" alt="Hotel-Habitaciones-2">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Habitaciones del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Hotel-Habitaciones-3.jpeg" alt="Hotel-Habitaciones-3">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Habitaciones del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Pasillo-1.jpeg" alt="Pasillo-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Pasillo del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Recepcion-1.jpeg" alt="Recepcion-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Recepcion del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Salon-Eventos-1.jpeg" alt="Salon-Eventos-1">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Salon de Eventos del Hotel</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="img">
-                <img src="/ImagenesHotel/Salon-Eventos-2.jpeg" alt="Salon-Eventos-2">
-              </div>
-              <div class="overlay">
-                <i class="ri-add-line"></i>
-                <h3>Salon de Eventos del Hotel</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
+<!-- 🏨 CARRUSEL DE IMÁGENES HORIZONTAL -->
+<div class="gallery">
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Entrada-Hotel-1.jpeg" alt="Entrada del Hotel">
       </div>
-    </section>
+    </div>
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Estacionamiento-1.jpeg" alt="Estacionamiento">
+      </div>
+    </div>
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Hotel-Cancha-1.jpeg" alt="Cancha del Hotel">
+      </div>
+    </div>
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Hotel-Habitaciones-1.jpeg" alt="Habitaciones">
+      </div>
+    </div>
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Pasillo-1.jpeg" alt="Pasillo">
+      </div>
+    </div>
+    <div class="item">
+      <div class="img">
+        <img src="/ImagenesHotel/Salon-Eventos-1.jpeg" alt="Salon de eventos">
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <script is:inline>
@@ -245,10 +151,10 @@ import '../styles/styles.css';
 
     <section class="rooms-section">
       <div class="section__container">
-        <div class="heading">
-          <p class="section__subheader">Explora</p>
-          <h2 class="section__header">Las Habitaciones</h2>
-        </div>
+        <div class="habitaciones__heading">
+  <span class="habitaciones__title-bg">EXPLORA</span>
+  <h2 class="habitaciones__title">Las Habitaciones</h2>
+</div>
 
         <div class="rooms-grid">
           <!-- Habitación Baño Compartido -->
@@ -514,65 +420,68 @@ import '../styles/styles.css';
       </div>
     </section>
     
-    
 
+<section class="services" id="servicios">
+  <div class="services__wrapper">
+    <div class="services__left">
+      <!-- 🎨 Encabezado EXTRAS con estilo tipo sombra y degradado -->
+      <div class="upgrade__heading">
+  <div class="upgrade__title-bg">EXTRAS</div>
+  <h2 class="upgrade__title">Upgrade Disponible</h2>
+</div>
 
-    <section class="services" id="servicios">
-      <div class="services__wrapper">
-        <!-- Columna izquierda -->
-        <div class="services__left">
-          <div class="services__heading">
-            <h1 class="services__title-bg sr-fade-up">EXTRAS</h1>
-            <h2 class="services__title sr-fade-up">Upgrade Disponible</h2>
+<p class="upgrade__description">
+  Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.
+</p>
 
-            <!-- Agrupar párrafos en un bloque separado -->
-            <div class="services__description-center">
-              <p class="services__subtitle">Eleva tu experiencia con opciones exclusivas pensadas para tu comodidad y disfrute. Un toque extra de confort que transforma tu estadía en algo verdaderamente especial.</p>
-            </div>
-          </div>
-          <div class="services__grid">
-            <div class="service-card" data-extra="+2 Bs">
-              <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
-              <h3>Aire acondicionado</h3>
-            </div>
-            <div class="service-card" data-extra="+3 Bs">
-              <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
-              <h3>Desayuno casero</h3>
-            </div>
-            <div class="service-card" data-extra="+30 Bs">
-              <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
-              <h3>Kiosco de snacks</h3>
-            </div>
-            <div class="service-card" data-extra="+25 Bs">
-              <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
-              <h3>Noche de cine</h3>
-            </div>
-          </div>
+      <!-- 🎨 Grid de las cards de servicios -->
+      <div class="services__grid">
+        <div class="service-card" data-extra="+2 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
+          <h3>Aire acondicionado</h3>
         </div>
-        <!-- Columna derecha -->
-      <div class="services__right">
-        <div class="zoom-container">
-          <img src="/assets/hotel-fachada.jpg" alt="Hotel exterior" class="scroll-zoom" />
+        <div class="service-card" data-extra="+3 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Desayuno casero</h3>
+        </div>
+        <div class="service-card" data-extra="+30 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-store"></i></div>
+          <h3>Kiosco de snacks</h3>
+        </div>
+        <div class="service-card" data-extra="+25 Bs">
+          <div class="service-card__icon"><i class="fa-solid fa-film"></i></div>
+          <h3>Noche de cine</h3>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- 📸 Imagen del lado derecho -->
+    <div class="services__right">
+      <img src="/assets/foto9.jpg" alt="Hotel exterior">
+    </div>
+  </div>
+</section>
 
 
-    <section class="explore" id="explore">
-      <p class="section__subheader">UBICACIÓN</p>
-      <h2 class="section__header">Encuéntranos en Bermejo, Tarija</h2>
-      <div class="map__container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8535639886794!2d-64.9657881256508!3d-22.723998531647056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f9576fd91e17%3A0x858d42f6fc4b1e86!2sBermejo%2C%20Tarija!5e0!3m2!1ses!2sbo!4v1716123784707!5m2!1ses!2sbo"
-          width="100%"
-          height="450"
-          style="border:0; border-radius: 10px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
+
+
+
+<section class="explore" id="explore" style="padding-top: 2rem; margin-top: 1rem;">
+  <p class="section__subheader" style="margin-bottom: 0.2rem;">UBICACIÓN</p>
+  <h2 class="section__header" style="margin-bottom: 1rem;">Encuéntranos en Bermejo, Tarija</h2>
+  <div class="map__container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8535639886794!2d-64.9657881256508!3d-22.723998531647056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f9576fd91e17%3A0x858d42f6fc4b1e86!2sBermejo%2C%20Tarija!5e0!3m2!1ses!2sbo!4v1716123784707!5m2!1ses!2sbo"
+      width="100%"
+      height="450"
+      style="border:0; border-radius: 10px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
 
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
