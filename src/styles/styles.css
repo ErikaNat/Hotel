@@ -1683,3 +1683,15 @@ nav {
 .explore .section__subheader {
   margin-top: -20rem; /* 🔼 Sube solo el título UBICACIÓN */
 }
+
+
+.nav-with-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
