@@ -9,6 +9,11 @@ import Chatbot from '../components/Chatbot.astro';
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Hotel Tariquia">
+    <meta property="og:title" content="Hotel Tariquia - Bermejo, Tarija">
+    <meta property="og:description" content="Hotel Tariquia - Disfruta de una estancia única en Bermejo, Tarija.">
+    <meta property="og:type" content="website">
     <title>Hotel Tariquia</title>
     <meta name="description" content="Hotel Tariquia - Disfruta de una estancia única en Bermejo, Tarija. Ofrecemos comodidad y servicios excepcionales.">
 
@@ -22,6 +27,7 @@ import Chatbot from '../components/Chatbot.astro';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
@@ -68,7 +74,7 @@ import Chatbot from '../components/Chatbot.astro';
 
     <section class="section__container about__container" id="about">
       <div class="about__image">
-        <img src="assets/about.jpg" alt="about" />
+        <img src="ImagenesHotel/Recepcion-4.jpeg" alt="Recepción" />
       </div>
       <div class="about__content">
         <p class="section__subheader">SOBRE NOSOTROS</p>
@@ -79,13 +85,11 @@ import Chatbot from '../components/Chatbot.astro';
       </div>
     </section>
 
-    <!-- TÍTULO DEL HOTEL -->
     <div class="elhotel__heading">
       <span class="elhotel__title-bg">EXPLORA</span>
       <h2 class="elhotel__title">El Hotel</h2>
     </div>
 
-    <!-- CARRUSEL DE IMÁGENES -->
     <div class="gallery">
       <div class="owl-carousel owl-theme">
         <div class="item">
@@ -124,7 +128,6 @@ import Chatbot from '../components/Chatbot.astro';
 
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
-        // Carrusel de galería (comportamiento original)
         $('.owl-carousel').owlCarousel({
           loop: true,
           margin: 20,
@@ -153,7 +156,6 @@ import Chatbot from '../components/Chatbot.astro';
         </div>
 
         <div class="rooms-grid">
-          <!-- Habitación Baño Compartido -->
           <div class="room-card">
             <div class="room-image">
               <img src="/ImagenesHotel/Baño-Compartido-1.jpeg" alt="Baño-Compartido-1">
@@ -210,7 +212,6 @@ import Chatbot from '../components/Chatbot.astro';
             </div>
           </div>
           
-          <!-- Habitación Baño Privado -->
           <div class="room-card">
             <div class="room-image">
               <img src="/ImagenesHotel/Baño-Privado-1.jpeg" alt="Baño-Privado-1">
@@ -278,7 +279,6 @@ import Chatbot from '../components/Chatbot.astro';
 
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
-        // Configuración base para cada tipo de habitación
         const roomConfig = {
           'bcompartido': {
             basePrice: 0,
@@ -290,20 +290,17 @@ import Chatbot from '../components/Chatbot.astro';
           }
         };
         
-        // Función para actualizar precio y período
         function updatePriceAndPeriod(roomCard) {
           const imgAlt = roomCard.querySelector('.room-image img').alt;
           const roomType = imgAlt.includes('Privado') ? 'bprivado' : 'bcompartido';
           let total = roomConfig[roomType].basePrice;
           let periodText = roomConfig[roomType].defaultPeriod;
           
-          // Obtener todas las opciones seleccionadas
           const checkedInputs = roomCard.querySelectorAll('.room-options input:checked');
           
           checkedInputs.forEach(input => {
             total += parseInt(input.value) || 0;
             
-            // Determinar el texto del período basado en la selección
             if (input.name.includes('tipo-') && input.getAttribute('data-group') === 'horas') {
               const hoursMatch = input.parentElement.textContent.match(/(\d+)\s*Hora/);
               if (hoursMatch) {
@@ -313,18 +310,15 @@ import Chatbot from '../components/Chatbot.astro';
             }
           });
           
-          // Actualizar la UI
           roomCard.querySelector('.room-price').textContent = total;
           roomCard.querySelector('.price-period').textContent = periodText;
         }
         
-        // Configurar los event listeners para los inputs
         function setupPriceCalculators() {
           document.querySelectorAll('.room-options input').forEach(input => {
             input.addEventListener('change', function() {
               const roomCard = this.closest('.room-card');
               
-              // Manejar radios para selección única por grupo
               if (this.type === 'radio') {
                 const groupName = this.getAttribute('data-group');
                 if (groupName) {
@@ -339,7 +333,6 @@ import Chatbot from '../components/Chatbot.astro';
           });
         }
         
-        // Función para los botones de mostrar/ocultar
         function setupToggleButtons() {
           document.querySelectorAll('.toggle-btn').forEach(button => {
             button.addEventListener('click', function(e) {
@@ -361,11 +354,9 @@ import Chatbot from '../components/Chatbot.astro';
           });
         }
 
-        // Inicialización
         setupToggleButtons();
         setupPriceCalculators();
         
-        // Establecer valores iniciales
         document.querySelectorAll('.room-card').forEach(card => {
           updatePriceAndPeriod(card);
         });
@@ -520,15 +511,12 @@ import Chatbot from '../components/Chatbot.astro';
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script type="module" src="/src/scripts/main.js"></script>
   
     <script type="module" src="/src/scripts/carousel.js"></script>
 
-    
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
 
     <Chatbot />

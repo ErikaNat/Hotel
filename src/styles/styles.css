@@ -61,14 +61,14 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--white);
-  background-color: #308446;  /* Cambiado a verde */
+  background-color: #308446;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #246333; /* Hover verde oscuro */
+  background-color: #246333;
 }
 
 img {
@@ -152,16 +152,16 @@ nav {
 
 .header {
   position: relative;
-  height: 100vh; /* O ajusta la altura según tu necesidad, por ejemplo: 80vh */
+  height: 100vh; 
   overflow: hidden;
 }
 
 
 .header__container {
   position: absolute;
-  top: 55%; /* Centro vertical */
-  left: 50%; /* Centro horizontal */
-  transform: translate(-50%, -50%); /* Alinear exacto al centro */
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   z-index: 2;
@@ -169,7 +169,7 @@ nav {
 }
 
 .header-carousel {
-  height: 100vh; /* 🔼 Ajusta para cubrir toda la pantalla */
+  height: 100vh; 
 }
 
 
@@ -193,65 +193,15 @@ nav {
   color: var(--primary-color);
 }
 
-.booking__container {
-  padding-block: 0;
-}
-
-.booking__form {
-  padding: 2rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: var(--white);
-  border-radius: 10px;
-  transform: translateY(-50%);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.input__group {
-  flex: 1 1 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.input__group span {
-  font-size: 1.75rem;
-  color: var(--primary-color);
-}
-
-.input__group label {
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.input__group input {
-  display: block;
-  width: 100%;
-  max-width: 150px;
-  padding-block: 5px;
-  color: var(--text-dark);
-  font-size: 0.9rem;
-  outline: none;
-  border: none;
-}
-
-.input__group input::placeholder {
-  color: var(--text-light);
-}
-
 .about__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 🔼 Asegura dos columnas para imagen y texto */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding-top: 9rem; /* 🔼 Controla altura superior */
-  max-width: 1200px; /* 🔼 Ancho máximo */
-  margin: 0 auto; /* 🔼 Centrado horizontal */
-  padding-left: 2rem; /* 🔼 Espacio lateral izquierdo */
-  padding-right: 2rem; /* 🔼 Espacio lateral derecho */
+  padding-top: 9rem; 
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding-left: 2rem; 
+  padding-right: 2rem; 
 }
 
 
@@ -265,80 +215,6 @@ nav {
   margin-top: 4rem;
   display: grid;
   gap: 1rem;
-}
-
-.room__card {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.room__card__image {
-  position: relative;
-  isolation: isolate;
-}
-
-.room__card__icons {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 1rem;
-  z-index: 1;
-}
-
-.room__card__icons span {
-  display: inline-block;
-  padding: 2px 8px;
-  font-size: 1.5rem;
-  background-color: var(--white);
-  border-radius: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.room__card__icons span:nth-child(1) {
-  color: #f472b6;
-}
-
-.room__card__icons span:nth-child(2) {
-  color: #c084fc;
-}
-
-.room__card__icons span:nth-child(3) {
-  color: #60a5fa;
-}
-
-.room__card__details {
-  padding: 1rem;
-}
-
-.room__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.room__card p {
-  margin-bottom: 0.5rem;
-  color: var(--text-light);
-}
-
-.room__card h5 {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-light);
-}
-
-.room__card h5 span {
-  font-size: 1.1rem;
-  color: var(--text-dark);
 }
 
 .service {
@@ -386,12 +262,12 @@ nav {
 }
 
 .service__list li:nth-child(1) span {
-  color: #34d399; /* verde */
+  color: #34d399; 
   background-color: #d1fae5;
 }
 
 .service__list li:nth-child(2) span {
-  color: #38bdf8; /* celeste */
+  color: #38bdf8; 
   background-color: #e0f2fe;
 }
 
@@ -410,81 +286,9 @@ nav {
   background-color: #ccfbf1;
 }
 
-.banner__content {
-  padding: 2rem;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.banner__card {
-  text-align: center;
-  flex: 1 1 180px;
-}
-
-.banner__card h4 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.banner__card p {
-  color: var(--text-light);
-}
-
 .explore :is(.section__subheader, .section__header) {
   text-align: center;
   margin-inline: auto;
-}
-
-.explore__bg {
-  margin-top: 4rem;
-  padding-block: 3rem;
-  display: grid;
-  grid-template-columns:
-    minmax(1rem, 1fr)
-    minmax(0, var(--max-width))
-    minmax(1rem, 1fr);
-  background-image: url("assets/explore.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.explore__content {
-  grid-column: 2/3;
-  max-width: 400px;
-  padding: 2rem;
-  background-color: var(--white);
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.explore__content p {
-  margin-bottom: 0.5rem;
-}
-
-.explore__content h4 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  color: var(--text-dark);
-}
-
-.explore__content .btn {
-  color: var(--primary-color);
-  background-color: #308446;
-  border: 1px solid var(--primary-color);
-}
-
-.explore__content .btn:hover {
-  color: var(--white);
-  background-color: #246333;
 }
 
 .footer {
@@ -623,16 +427,6 @@ nav {
 }
 
 
-.services__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 2rem; /* 🔽 Ajusta el padding general */
-}
-
 
 @media (width > 1024px) {
   .room__grid {
@@ -684,11 +478,6 @@ nav {
   z-index: 1;
 }
 
-@keyframes shine {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
 .services__subtitle {
   max-width: 500px;
   margin: 0.2rem auto;
@@ -701,7 +490,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 1rem; /* 🔽 Reduce margen superior */
+  margin-top: 1rem; 
 }
 
 .service-card {
@@ -711,6 +500,11 @@ nav {
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s;
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .service-card:hover {
@@ -731,28 +525,6 @@ nav {
   object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-.service-card {
-  position: relative;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
 .service-card i {
   font-size: 2rem;
   color: #7fc142;
@@ -770,13 +542,13 @@ nav {
   content: attr(data-extra);
   font-size: 0.95rem;
   margin-top: 0.5rem;
-  color: #7fc142; /* ✅ verde */
+  color: #7fc142; 
   opacity: 0.9;
   transition: color 0.3s ease;
 }
 
 .service-card:hover::after {
-  color: #ffffff; /* ✅ blanco al hover */
+  color: #ffffff; 
 }
 
 .service-card:hover {
@@ -789,7 +561,6 @@ nav {
 .service-card:hover h3 {
   color: #fff;
 }
-
 
 .services__heading {
   position: relative;
@@ -853,7 +624,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 600px; /* ✅ Le damos una altura mínima */
+  min-height: 600px; 
 }
 
 .services__right img {
@@ -861,7 +632,7 @@ nav {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 700px;
-  height: 100%; /* ✅ más largo */
+  height: 100%; 
   object-fit: cover;
 }
 
@@ -888,44 +659,7 @@ nav {
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 2rem;
-  margin-bottom: 0.5rem; /* Aumenta separación hacia las cards */
-}
-
-.zoom-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 900px; /* 🔸 Aumenta tamaño máximo */
-  margin: 2rem auto; /* 🔸 Centra horizontalmente */
-}
-
-.zoom-container img {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  height: auto; /* 🔸 Mantiene proporción */
-}
-
-.zoom-container img.scroll-zoom {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
-}
-
-.zoom-container img {
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(0.85);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
-
-.zoom-container img.revealed {
-  transform: scale(1);
-  opacity: 1;
+  margin-bottom: 0.5rem;
 }
 
 .header-carousel {
@@ -952,9 +686,9 @@ nav {
 }
 
 .reception-benefits {
-  padding: 2rem 1rem; /* ✅ Antes era 5rem, lo bajamos */
+  padding: 2rem 1rem;
   background-color: #ffffff;
-  margin-top: -28rem; /* ✅ Sube visualmente la sección */
+  margin-top: -28rem;
 }
 
 
@@ -981,7 +715,6 @@ nav {
   justify-content: center;
 }
 
-/* Reutilizamos estilos existentes */
 .reception-benefits .service__list {
   list-style: none;
   margin-top: 2rem;
@@ -991,7 +724,7 @@ nav {
 
 .explore {
   padding-top: 0rem;
-  margin-top: -20rem; /* ✅ Nuevo: espacio adicional debajo del bloque anterior */
+  margin-top: -20rem; 
 }
 
 .map__container {
@@ -1000,11 +733,10 @@ nav {
   margin: 0 auto;
 }
 
-/* Gallery Styles */
 .gallery {
   position: relative;
   padding: 5rem 0;
-  background-color: transparent; /* Fondo sin color */
+  background-color: transparent; 
 }
 
 .gallery .heading {
@@ -1021,11 +753,6 @@ nav {
 
 .gallery .img {
   position: relative;
-
-
-
-
-
   border-radius: 8px;
 }
 
@@ -1078,7 +805,6 @@ nav {
   cursor: pointer;
 }
 
-/* Owl Carousel Navigation */
 .gallery .owl-nav {
   position: absolute;
   top: -80px;
@@ -1182,12 +908,6 @@ nav {
   font-weight: normal;
 }
 
-/* Rooms Section Styles */
-.rooms-section {
-  padding: 5rem 0;
-  background: #fff;
-}
-
 .rooms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1255,7 +975,6 @@ nav {
   font-weight: normal;
 }
 
-/* Agrega esto al final de tu CSS */
 .room-options {
   padding: 1rem 0;
 }
@@ -1290,7 +1009,6 @@ nav {
   font-weight: 600;
 }
 
-/* 🎨 Título EXPLORA y El Hotel perfectamente centrado */
 .explore__heading {
   position: relative;
   margin-bottom: 2rem;
@@ -1320,7 +1038,6 @@ nav {
   z-index: 1;
 }
 
-/* 📍 Subir el título "El Hotel" (si fuera necesario) */
 .services__heading {
   margin-top: 4rem;
 }
@@ -1330,10 +1047,9 @@ nav {
   text-align: center;
 }
 
-/* 📍 Botones de navegación estilizados y ajustados */
 .gallery .owl-nav {
   position: absolute;
-  top: -90px; /* Subir los botones más arriba */
+  top: -90px; 
   right: 20px;
   display: flex;
   gap: 10px;
@@ -1373,8 +1089,6 @@ nav {
   color: white !important;
 }
 
-
-/* 📍 Ajustar separación lateral de las imágenes */
 .owl-carousel .item {
   padding: 0 8px;
 }
@@ -1383,11 +1097,10 @@ nav {
   padding: 4rem 1rem;
 }
 
-/* 🎨 Estilo EXPLORA con Las Habitaciones */
 .habitaciones__heading {
   position: relative;
-  margin-top: -5rem;  /* Sube el título */
-  margin-bottom: 4rem;  /* Espacio debajo */
+  margin-top: -5rem;  
+  margin-bottom: 4rem;  
   text-align: center;
 }
 
@@ -1416,24 +1129,19 @@ nav {
   animation: shine 4s linear infinite;
 }
 
-/* Efecto de degradado animado */
 @keyframes shine {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
-/* Si quieres más separación entre el título y las tarjetas */
 .room__grid {
   margin-top: 5rem;
 }
 
-
-
-/* 🎨 Título EXPLORA con "El Hotel" igual que "Las Habitaciones" */
 .elhotel__heading {
   position: relative;
-  margin-top: 4rem;  /* Ajusta según tu diseño */
-  margin-bottom: 4rem;  /* Espacio debajo del título */
+  margin-top: 4rem; 
+  margin-bottom: 4rem;  
   text-align: center;
 }
 
@@ -1462,30 +1170,12 @@ nav {
   animation: shine 4s linear infinite;
 }
 
-/* Efecto de degradado animado */
-@keyframes shine {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
-
 .room-rate .amenity {
-  color: #38bdf8; /* 🎨 Celeste igual que el título */
+  color: #38bdf8;
 }
 
 .room__grid {
   margin-top: 5rem;
-}
-
-
-.services__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 2rem; /* 🔽 Ajusta el padding general */
 }
 
 .services__title-bg {
@@ -1513,18 +1203,6 @@ nav {
   margin-bottom: 2rem;
 }
 
-
-
-
-
-
-
-/* 🎯 ESTILO CORRECTO PARA UPGRADE DISPONIBLE */
-.services {
-  padding: 2rem 2rem;
-  background-color: #fff;
-}
-
 .services__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1532,9 +1210,8 @@ nav {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: -1rem 2rem; /* 🔽 Ajusta el padding general */
+  padding: -1rem 2rem; 
 }
-
 
 .services__left {
   display: flex;
@@ -1573,71 +1250,48 @@ nav {
   margin-bottom: 1rem;
 }
 
-@keyframes shine {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
+
 
 .services__subtitle {
-  max-width: 600px;            /* Ancho máximo más amplio */
-  margin-top: -4rem;            /* Espacio arriba (puedes ajustar a -1rem si lo quieres más pegado) */
-  margin-bottom: 1rem;         /* Espacio debajo */
+  max-width: 600px;        
+  margin-top: -4rem;           
+  margin-bottom: 1rem;    
   color: #555;
-  text-align: center;          /* CENTRADO DEL TEXTO */
+  text-align: center;         
   position: relative;
   z-index: 1;
-  margin-left: auto;           /* CENTRAR horizontalmente */
-  margin-right: auto;          /* CENTRAR horizontalmente */
+  margin-left: auto;       
+  margin-right: auto;      
 }
 
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 1rem; /* 🔽 Reduce margen superior */
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-}
-
-.service-card__icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #7fc142;
+  margin-top: 1rem;
 }
 
 .services__right {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 25rem; /* ⚫ Puedes agregar aquí */
+  margin-top: 25rem; 
 }
 
 .services__right img {
   width: 100%;
-  max-width: 600px; /* Tamaño grande */
+  max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   object-fit: cover;
   height: auto;
-  margin-top: -13.5rem; /* ⚫ MUEVE LA IMAGEN */
+  margin-top: -13.5rem; 
 }
 
-/* 🔥 ESTILO CORREGIDO PARA EL TÍTULO DE "EXTRAS" */
 .upgrade__heading {
   position: relative;
-  margin-top: -17rem;   /* 🔼 Sube aún más arriba */
-  margin-bottom: 4rem;  /* Espacio debajo del título */
+  margin-top: -17rem;   
+  margin-bottom: 4rem; 
   text-align: center;
 }
 
@@ -1669,21 +1323,16 @@ nav {
 
 .upgrade__description {
   max-width: 600px;
-  margin: -3rem auto 1rem;  /* 🔽 Aumenta margen superior para alejar de título */
+  margin: -3rem auto 1rem;  
   color: #555;
   text-align: center;
 }
 
-@keyframes shine {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
 
 
 .explore .section__subheader {
-  margin-top: -20rem; /* 🔼 Sube solo el título UBICACIÓN */
+  margin-top: -20rem; 
 }
-
 
 .nav-with-gradient {
   background: linear-gradient(
@@ -1694,4 +1343,51 @@ nav {
   );
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+  .services__wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .room-header {
+    text-align: center;
+  }
+  
+  .price-display {
+    margin-top: 0.5rem;
+  }
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.price-display {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.room-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.currency {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.price-period {
+  font-size: 0.8rem;
+  color: var(--text-light);
 }
